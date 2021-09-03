@@ -1,9 +1,13 @@
 {
-  "description" : "PLACEHOLDER_DESC",
+  "inputProperties" : {
+    "properties" : { }
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/CustomersDatasetInput.csv"
+    }
+  },
   "datasetId" : "4265",
-  "dataFormat" : "csv",
-  "datasetType" : "File",
-  "datasetMode" : "batch",
   "schema" : {
     "type" : "struct",
     "fields" : [ {
@@ -48,19 +52,8 @@
       "metadata" : { }
     } ]
   },
-  "commonProperties" : {
-    "properties" : {
-      "location" : "dbfs:/Prophecy/464437275@qq.com/CustomersDatasetInput.csv"
-    }
-  },
-  "inputProperties" : {
-    "properties" : {
-      "sep" : ","
-    }
-  },
-  "outputProperties" : {
-    "properties" : {
-      "sep" : ","
-    }
-  }
+  "datasetMode" : "batch",
+  "datasetType" : "File",
+  "description" : "PLACEHOLDER_DESC",
+  "dataFormat" : "json"
 }

@@ -1,0 +1,38 @@
+{
+  "name" : "WriteReport",
+  "component" : "Target",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "name",
+      "exprId" : 96
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "name",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 97
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "amount",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 78
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customer_id",
+      "exprId" : -1
+    }
+  } ]
+}

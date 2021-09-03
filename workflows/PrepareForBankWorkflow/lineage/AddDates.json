@@ -1,0 +1,208 @@
+{
+  "name" : "AddDates",
+  "component" : "SchemaTransformer",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_number",
+      "exprId" : 68
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_number",
+      "exprId" : 68
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 69
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 69
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 70
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 70
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "middle_initial",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "middle_initial",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "address",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "address",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "city",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "city",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "state",
+      "exprId" : 74
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state",
+      "exprId" : 74
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "zip_code",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "zip_code",
+      "exprId" : 75
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : 156
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_start_date",
+      "exprId" : 156
+    }
+  }, {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_end_date",
+      "exprId" : 166
+    },
+    "transformation" : "CAST('9999-12-31' AS DATE)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_number",
+      "exprId" : 68
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : 68
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 69
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : 69
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 70
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : 70
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "middle_initial",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "address",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "address",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "city",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "city",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "state",
+      "exprId" : 74
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "state",
+      "exprId" : 74
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "zip_code",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : 75
+    }
+  }, {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : 156
+    },
+    "transformation" : "current_date()"
+  } ]
+}

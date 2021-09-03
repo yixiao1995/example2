@@ -1,0 +1,147 @@
+{
+  "name" : "AggregateComponent",
+  "component" : "Aggregate",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "order_id",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "order_id",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 102
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "order_id",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "orders",
+      "exprId" : 114
+    },
+    "transformation" : "count(`order_id`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 116
+    },
+    "transformation" : "sum(`amount`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 118
+    },
+    "transformation" : "max(`customer_id`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 74
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 120
+    },
+    "transformation" : "max(`first_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 122
+    },
+    "transformation" : "max(`last_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone",
+      "exprId" : 76
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone",
+      "exprId" : 124
+    },
+    "transformation" : "max(`phone`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email",
+      "exprId" : 77
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email",
+      "exprId" : 126
+    },
+    "transformation" : "max(`email`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "country_code",
+      "exprId" : 78
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "country_code",
+      "exprId" : 128
+    },
+    "transformation" : "max(`country_code`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_length_days",
+      "exprId" : 90
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_length_days",
+      "exprId" : 130
+    },
+    "transformation" : "max(`account_length_days`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_flags",
+      "exprId" : 79
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_flags",
+      "exprId" : 132
+    },
+    "transformation" : "max(`account_flags`)"
+  } ]
+}

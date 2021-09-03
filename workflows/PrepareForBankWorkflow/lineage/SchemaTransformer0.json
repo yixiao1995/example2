@@ -1,0 +1,81 @@
+{
+  "name" : "SchemaTransformer0",
+  "component" : "SchemaTransformer",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "full name"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "full name"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "country_code"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "country_code"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_open_date"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_open_date"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_flags"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_flags"
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_flags"
+    }, {
+      "port" : "in",
+      "name" : "country_code"
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state_name"
+    },
+    "transformation" : "concat(`account_flags`, `country_code`)"
+  } ]
+}

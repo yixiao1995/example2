@@ -1,0 +1,93 @@
+{
+  "name" : "CustomerEdits",
+  "component" : "Source",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_number",
+      "exprId" : 68
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 69
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 70
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "middle_initial",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "address",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "address",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "city",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "city",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "state",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state",
+      "exprId" : 74
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "zip_code",
+      "exprId" : 75
+    }
+  } ]
+}

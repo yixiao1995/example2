@@ -1,0 +1,137 @@
+{
+  "name" : "ReadMerged",
+  "component" : "Source",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 84
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 85
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "middle_initial",
+      "exprId" : 86
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "address",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "address",
+      "exprId" : 87
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "city",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "city",
+      "exprId" : 88
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "state",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state",
+      "exprId" : 89
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "zip_code",
+      "exprId" : 90
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_number",
+      "exprId" : 91
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "is_current",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_current",
+      "exprId" : 92
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "is_first",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_first",
+      "exprId" : 93
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_start_date",
+      "exprId" : 94
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_end_date",
+      "exprId" : 95
+    }
+  } ]
+}

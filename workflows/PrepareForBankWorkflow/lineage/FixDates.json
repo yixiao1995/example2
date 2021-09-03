@@ -1,0 +1,293 @@
+{
+  "name" : "FixDates",
+  "component" : "SchemaTransformer",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 2
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 2
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "middle_initial",
+      "exprId" : 3
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "middle_initial",
+      "exprId" : 3
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "address",
+      "exprId" : 4
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "address",
+      "exprId" : 4
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "city",
+      "exprId" : 5
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "city",
+      "exprId" : 5
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "state",
+      "exprId" : 6
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state",
+      "exprId" : 6
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "zip_code",
+      "exprId" : 7
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "zip_code",
+      "exprId" : 7
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_number",
+      "exprId" : 8
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_number",
+      "exprId" : 8
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : 26
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_start_date",
+      "exprId" : 26
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : 40
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_end_date",
+      "exprId" : 40
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "is_current",
+      "exprId" : 11
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_current",
+      "exprId" : 11
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "is_first",
+      "exprId" : 12
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_first",
+      "exprId" : 12
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_dim_key",
+      "exprId" : 0
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customer_dim_key",
+      "exprId" : 0
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 1
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 2
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : 2
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "middle_initial",
+      "exprId" : 3
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : 3
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "address",
+      "exprId" : 4
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "address",
+      "exprId" : 4
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "city",
+      "exprId" : 5
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "city",
+      "exprId" : 5
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "state",
+      "exprId" : 6
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "state",
+      "exprId" : 6
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "zip_code",
+      "exprId" : 7
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : 7
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_number",
+      "exprId" : 8
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : 8
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "eff_end_date",
+      "exprId" : 10
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : 40
+    },
+    "transformation" : "CAST(`eff_end_date` AS DATE)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "is_current",
+      "exprId" : 11
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "is_current",
+      "exprId" : 11
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "is_first",
+      "exprId" : 12
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "is_first",
+      "exprId" : 12
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "eff_start_date",
+      "exprId" : 9
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : 26
+    },
+    "transformation" : "CAST(`eff_start_date` AS DATE)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "eff_end_date",
+      "exprId" : 10
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : 10
+    }
+  } ]
+}

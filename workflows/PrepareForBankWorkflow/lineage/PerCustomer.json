@@ -1,0 +1,49 @@
+{
+  "name" : "PerCustomer",
+  "component" : "Join",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "first_name",
+      "exprId" : 13
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 70
+    }
+  }, {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "last_name",
+      "exprId" : 14
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "amount",
+      "exprId" : 5
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "customer_id",
+      "exprId" : 12
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 73
+    }
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "name" : "Reformat0",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "order_id",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "another_column",
+      "exprId" : 107
+    },
+    "transformation" : "concat(CAST(`customer_id` AS STRING))"
+  } ]
+}

@@ -1,0 +1,104 @@
+{
+  "name" : "FinalDatasetOutput",
+  "component" : "Target",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "id",
+      "exprId" : 22
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "id",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "full_name",
+      "exprId" : 23
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "full_name",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone",
+      "exprId" : 24
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "phone",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone_area_code",
+      "exprId" : 25
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "phone_area_code",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email",
+      "exprId" : 7
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "email",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email_provider",
+      "exprId" : 26
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "email_provider",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "orders",
+      "exprId" : 1
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "orders",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 2
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "amount",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "delinquent_last_90_days",
+      "exprId" : 27
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "delinquent_last_90_days",
+      "exprId" : -1
+    }
+  } ]
+}

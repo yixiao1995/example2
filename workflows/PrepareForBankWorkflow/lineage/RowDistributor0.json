@@ -1,0 +1,8 @@
+{
+  "name" : "RowDistributor0",
+  "component" : "RowDistributor",
+  "transformations" : [ {
+    "sources" : [ ],
+    "transformation" : "Filter((customer_id#0 > 71))"
+  } ]
+}

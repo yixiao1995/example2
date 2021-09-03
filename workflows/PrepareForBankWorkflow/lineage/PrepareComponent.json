@@ -1,0 +1,112 @@
+{
+  "name" : "PrepareComponent",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 3
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "id",
+      "exprId" : 22
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 4
+    }, {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 5
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "full_name",
+      "exprId" : 23
+    },
+    "transformation" : "concat(`first_name`, ' ', `last_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone",
+      "exprId" : 6
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone",
+      "exprId" : 24
+    },
+    "transformation" : "substring(`phone`, 2, 10)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone",
+      "exprId" : 6
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone_area_code",
+      "exprId" : 25
+    },
+    "transformation" : "substring(`phone`, 0, 2)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email",
+      "exprId" : 7
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email",
+      "exprId" : 7
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email",
+      "exprId" : 7
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email_provider",
+      "exprId" : 26
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "orders",
+      "exprId" : 1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "orders",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 2
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 2
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_flags",
+      "exprId" : 10
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "delinquent_last_90_days",
+      "exprId" : 27
+    },
+    "transformation" : "CASE WHEN (substring(`account_flags`, 1, 1) = 'D') THEN 'Y' ELSE 'N' END"
+  } ]
+}

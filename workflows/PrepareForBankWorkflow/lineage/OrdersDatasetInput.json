@@ -1,0 +1,71 @@
+{
+  "name" : "OrdersDatasetInput",
+  "component" : "Source",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "order_id",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 0
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "customer_id",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "order_status",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_status",
+      "exprId" : 2
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "order_category",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_category",
+      "exprId" : 3
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "order_date",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_date",
+      "exprId" : 4
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "amount",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 5
+    }
+  } ]
+}

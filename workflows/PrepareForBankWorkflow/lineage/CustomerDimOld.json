@@ -1,0 +1,148 @@
+{
+  "name" : "CustomerDimOld",
+  "component" : "Source",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "customer_dim_key",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_dim_key",
+      "exprId" : 0
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 2
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "middle_initial",
+      "exprId" : 3
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "address",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "address",
+      "exprId" : 4
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "city",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "city",
+      "exprId" : 5
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "state",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "state",
+      "exprId" : 6
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "zip_code",
+      "exprId" : 7
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_number",
+      "exprId" : 8
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_start_date",
+      "exprId" : 9
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "eff_end_date",
+      "exprId" : 10
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "is_current",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_current",
+      "exprId" : 11
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "is_first",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "is_first",
+      "exprId" : 12
+    }
+  } ]
+}

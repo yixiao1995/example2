@@ -1,0 +1,8 @@
+{
+  "name" : "Filter0",
+  "component" : "Filter",
+  "transformations" : [ {
+    "sources" : [ ],
+    "transformation" : "Filter((customer_id#0 > 50))"
+  } ]
+}

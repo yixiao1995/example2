@@ -1,0 +1,115 @@
+{
+  "name" : "DeltaSCD2Merge",
+  "component" : "Target",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_number",
+      "exprId" : 68
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customer_number",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 69
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "first_name",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 70
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "last_name",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "middle_initial",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "middle_initial",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "address",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "address",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "city",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "city",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "state",
+      "exprId" : 74
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "state",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "zip_code",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "zip_code",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "eff_start_date",
+      "exprId" : 156
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_start_date",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "eff_end_date",
+      "exprId" : 166
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "eff_end_date",
+      "exprId" : -1
+    }
+  } ]
+}

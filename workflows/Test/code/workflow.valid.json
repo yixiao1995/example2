@@ -1,0 +1,41 @@
+{
+  "resolvers" : [ ],
+  "graph" : {
+    "metainfo" : {
+      "cluster" : "local",
+      "id" : "Test",
+      "memory" : 1,
+      "mode" : "batch",
+      "processors" : 1,
+      "language" : "scala",
+      "imported" : true,
+      "interimMode" : "full",
+      "codeMode" : "sparse",
+      "buildSystem" : "maven"
+    },
+    "connections" : [ ],
+    "groups" : [ ],
+    "inports" : { },
+    "outports" : { },
+    "processes" : {
+      "test" : {
+        "component" : "Source",
+        "metadata" : {
+          "label" : "test",
+          "x" : 71,
+          "y" : 76
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "4265",
+          "version" : 0
+        }
+      }
+    }
+  }
+}

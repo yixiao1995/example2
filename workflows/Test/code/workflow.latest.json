@@ -1,0 +1,46 @@
+{
+  "graph" : {
+    "processes" : {
+      "test" : {
+        "component" : "Source",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "4265",
+          "version" : 0
+        },
+        "metadata" : {
+          "label" : "test",
+          "x" : 71,
+          "y" : 76
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "lineage" : ""
+      }
+    },
+    "connections" : [ ],
+    "groups" : [ ],
+    "locked" : false,
+    "metainfo" : {
+      "lastUpdated" : 1630639240655,
+      "id" : "Test",
+      "memory" : 1,
+      "imported" : true,
+      "language" : "scala",
+      "processors" : 1,
+      "cluster" : "local",
+      "mode" : "batch",
+      "interimMode" : "full",
+      "udfs" : null,
+      "codeMode" : "sparse",
+      "buildSystem" : "maven",
+      "udafs" : null,
+      "sparkOptions" : null
+    },
+    "inports" : { },
+    "outports" : { }
+  }
+}

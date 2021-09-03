@@ -1,0 +1,56 @@
+{
+  "description" : "PLACEHOLDER_DESC",
+  "datasetId" : "4266",
+  "dataFormat" : "csv",
+  "datasetType" : "File",
+  "datasetMode" : "batch",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "order_id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "customer_id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "order_status",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "order_category",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "order_date",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "amount",
+      "type" : "double",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/OrdersDatasetInput.csv"
+    }
+  },
+  "inputProperties" : {
+    "properties" : {
+      "sep" : ","
+    }
+  },
+  "outputProperties" : {
+    "properties" : {
+      "sep" : ","
+    }
+  }
+}

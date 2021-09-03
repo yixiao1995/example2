@@ -1,0 +1,53 @@
+{
+  "description" : "PLACEHOLDER_DESC",
+  "datasetId" : "4269",
+  "dataFormat" : "csv",
+  "datasetType" : "File",
+  "datasetMode" : "batch",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "report_title",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "customers",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "amount_total",
+      "type" : "double",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "orders_total",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/ReportDatasetOutput.csv"
+    }
+  },
+  "inputProperties" : {
+    "properties" : {
+      "inferSchema" : "true",
+      "sep" : ","
+    }
+  },
+  "outputProperties" : {
+    "properties" : {
+      "mode" : "overwrite",
+      "sep" : ","
+    }
+  }
+}

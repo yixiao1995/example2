@@ -1,0 +1,73 @@
+{
+  "description" : "PLACEHOLDER_DESC",
+  "datasetId" : "4268",
+  "dataFormat" : "csv",
+  "datasetType" : "File",
+  "datasetMode" : "batch",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "full_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "phone",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "phone_area_code",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "email",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "email_provider",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "orders",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "amount",
+      "type" : "double",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "delinquent_last_90_days",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/FinalDatasetOutput.csv"
+    }
+  },
+  "inputProperties" : {
+    "properties" : {
+      "inferSchema" : "true",
+      "sep" : ","
+    }
+  },
+  "outputProperties" : {
+    "properties" : {
+      "mode" : "overwrite",
+      "sep" : ","
+    }
+  }
+}

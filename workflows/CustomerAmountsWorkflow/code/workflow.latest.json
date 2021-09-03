@@ -1,0 +1,434 @@
+{
+  "resolvers" : [ ],
+  "graph" : {
+    "metainfo" : {
+      "cluster" : "local",
+      "id" : "id",
+      "memory" : 1,
+      "mode" : "batch",
+      "processors" : 1,
+      "language" : "scala",
+      "udfs" : {
+        "language" : "scala",
+        "udfs" : [ ]
+      },
+      "udafs" : {
+        "language" : "scala",
+        "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\nobject UDAFs {\n\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n  }\n\n}\n"
+      },
+      "sparkOptions" : {
+        "options" : {
+          "spark.sql.legacy.allowUntypedScalaUDF" : "true",
+          "spark.app.name" : "CustomerAmounts",
+          "spark.sql.catalogImplementation" : "hive"
+        }
+      },
+      "codeMode" : "sparse",
+      "buildSystem" : "maven"
+    },
+    "connections" : [ {
+      "metadata" : {
+        "route" : "e1"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "OrdersDatasetInput"
+      },
+      "tgt" : {
+        "port" : "left",
+        "process" : "JoinComponent"
+      }
+    }, {
+      "metadata" : {
+        "route" : "e2"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "CustomersDatasetInput"
+      },
+      "tgt" : {
+        "port" : "right",
+        "process" : "JoinComponent"
+      }
+    }, {
+      "metadata" : {
+        "route" : "e3"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "JoinComponent"
+      },
+      "tgt" : {
+        "port" : "in",
+        "process" : "PrepareComponent"
+      }
+    }, {
+      "metadata" : {
+        "route" : "e4"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "PrepareComponent"
+      },
+      "tgt" : {
+        "port" : "in",
+        "process" : "AggregateComponent"
+      }
+    }, {
+      "metadata" : {
+        "route" : "e5"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "AggregateComponent"
+      },
+      "tgt" : {
+        "port" : "in",
+        "process" : "CustomerOrdersDatasetOutput"
+      }
+    } ],
+    "groups" : [ ],
+    "inports" : { },
+    "outports" : { },
+    "processes" : {
+      "JoinComponent" : {
+        "component" : "Join",
+        "metadata" : {
+          "label" : "JoinComponent",
+          "x" : 129,
+          "y" : 98
+        },
+        "ports" : {
+          "inputs" : [ "left", "right" ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "joinCondition" : {
+            "format" : "scala",
+            "expr" : "col(\"left.customer_id\") === col(\"right.customer_id\")"
+          },
+          "selectColumns" : [ {
+            "targetCol" : "account_open_date",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.account_open_date\")"
+            }
+          }, {
+            "targetCol" : "order_id",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"left.order_id\")"
+            }
+          }, {
+            "targetCol" : "customer_id",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"left.customer_id\")"
+            }
+          }, {
+            "targetCol" : "amount",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"left.amount\")"
+            }
+          }, {
+            "targetCol" : "first_name",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.first_name\")"
+            }
+          }, {
+            "targetCol" : "last_name",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.last_name\")"
+            }
+          }, {
+            "targetCol" : "phone",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.phone\")"
+            }
+          }, {
+            "targetCol" : "email",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.email\")"
+            }
+          }, {
+            "targetCol" : "country_code",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.country_code\")"
+            }
+          }, {
+            "targetCol" : "account_flags",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"right.account_flags\")"
+            }
+          } ],
+          "ramp" : 0,
+          "detailedStats" : false,
+          "udf_definitions" : [ ],
+          "joinType" : "inner",
+          "limit" : 0
+        },
+        "ignore" : false
+      },
+      "CustomerOrdersDatasetOutput" : {
+        "component" : "Target",
+        "metadata" : {
+          "label" : "CustomerOrdersDatasetOutput",
+          "x" : 495,
+          "y" : 98
+        },
+        "ports" : {
+          "inputs" : [ "in" ],
+          "outputs" : [ ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "ramp" : 0,
+          "detailedStats" : false,
+          "version" : 3,
+          "id" : "4267",
+          "udf_definitions" : [ ],
+          "limit" : 0
+        },
+        "ignore" : false
+      },
+      "AggregateComponent" : {
+        "component" : "Aggregate",
+        "metadata" : {
+          "label" : "AggregateComponent",
+          "x" : 373,
+          "y" : 98
+        },
+        "ports" : {
+          "inputs" : [ "in" ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "ramp" : 0,
+          "detailedStats" : false,
+          "columns" : [ {
+            "targetCol" : "order_id",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "col(\"order_id\")"
+            }
+          } ],
+          "udf_definitions" : [ ],
+          "aggcols" : [ {
+            "targetCol" : "orders",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "count(col(\"order_id\"))"
+            }
+          }, {
+            "targetCol" : "amount",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "sum(col(\"amount\"))"
+            }
+          }, {
+            "targetCol" : "customer_id",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"customer_id\"))"
+            }
+          }, {
+            "targetCol" : "first_name",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"first_name\"))"
+            }
+          }, {
+            "targetCol" : "last_name",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"last_name\"))"
+            }
+          }, {
+            "targetCol" : "phone",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"phone\"))"
+            }
+          }, {
+            "targetCol" : "email",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"email\"))"
+            }
+          }, {
+            "targetCol" : "country_code",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"country_code\"))"
+            }
+          }, {
+            "targetCol" : "account_length_days",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"account_length_days\"))"
+            }
+          }, {
+            "targetCol" : "account_flags",
+            "expression" : {
+              "format" : "scala",
+              "expr" : "max(col(\"account_flags\"))"
+            }
+          } ],
+          "opType" : "groupBy",
+          "limit" : 0
+        },
+        "ignore" : false
+      },
+      "CustomersDatasetInput" : {
+        "component" : "Source",
+        "metadata" : {
+          "label" : "CustomersDatasetInput",
+          "x" : 7,
+          "y" : 154
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "ramp" : 0,
+          "detailedStats" : false,
+          "version" : 3,
+          "id" : "4265",
+          "udf_definitions" : [ ],
+          "limit" : 0
+        },
+        "ignore" : false
+      },
+      "OrdersDatasetInput" : {
+        "component" : "Source",
+        "metadata" : {
+          "label" : "OrdersDatasetInput",
+          "x" : 7,
+          "y" : 42
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "ramp" : 0,
+          "detailedStats" : false,
+          "version" : 2,
+          "id" : "4266",
+          "udf_definitions" : [ ],
+          "limit" : 0
+        },
+        "ignore" : false
+      },
+      "PrepareComponent" : {
+        "component" : "Reformat",
+        "metadata" : {
+          "label" : "PrepareComponent",
+          "x" : 251,
+          "y" : 98
+        },
+        "ports" : {
+          "inputs" : [ "in" ],
+          "outputs" : [ "out" ]
+        },
+        "properties" : {
+          "src_desc" : "",
+          "phase" : 0,
+          "ramp" : 0,
+          "detailedStats" : false,
+          "udf_definitions" : [ ],
+          "functions" : [ {
+            "addReplaceColumn" : "account_length_days",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "datediff(current_date(), col(\"account_open_date\"))"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "order_id",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"order_id\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "customer_id",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"customer_id\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "amount",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"amount\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "first_name",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"first_name\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "last_name",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"last_name\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "phone",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"phone\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "email",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"email\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "country_code",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"country_code\")"
+            } ],
+            "enabled" : true
+          }, {
+            "addReplaceColumn" : "account_flags",
+            "inputArgs" : [ {
+              "type" : "scala",
+              "expr" : "col(\"account_flags\")"
+            } ],
+            "enabled" : true
+          } ],
+          "limit" : 0
+        },
+        "ignore" : false
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "description" : "customers by total of their purchases",
+  "datasetId" : "4276",
+  "dataFormat" : "csv",
+  "datasetType" : "File",
+  "datasetMode" : "batch",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "amount",
+      "type" : "long",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "customer_id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/CustomerTotals"
+    }
+  },
+  "outputProperties" : {
+    "properties" : {
+      "mode" : "overwrite",
+      "sep" : ",",
+      "header" : true
+    }
+  }
+}

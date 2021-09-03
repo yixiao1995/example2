@@ -1,0 +1,66 @@
+{
+  "description" : "PLACEHOLDER_DESC",
+  "datasetId" : "4265",
+  "dataFormat" : "csv",
+  "datasetType" : "File",
+  "datasetMode" : "batch",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "customer_id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "first_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "last_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "phone",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "email",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "country_code",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "account_open_date",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "account_flags",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/Prophecy/464437275@qq.com/CustomersDatasetInput.csv"
+    }
+  },
+  "inputProperties" : {
+    "properties" : {
+      "sep" : ","
+    }
+  },
+  "outputProperties" : {
+    "properties" : {
+      "sep" : ","
+    }
+  }
+}

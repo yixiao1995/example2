@@ -1,0 +1,60 @@
+{
+  "name" : "ReportDatasetOutput",
+  "component" : "Target",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "id",
+      "exprId" : 59
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "id",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "report_title",
+      "exprId" : 69
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "report_title",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customers",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "customers",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount_total",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "amount_total",
+      "exprId" : -1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "orders_total",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "orders_total",
+      "exprId" : -1
+    }
+  } ]
+}

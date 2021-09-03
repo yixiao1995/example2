@@ -1,0 +1,63 @@
+{
+  "name" : "TotalByCustomer",
+  "component" : "Aggregate",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 78
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 70
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 84
+    },
+    "transformation" : "max(`first_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 86
+    },
+    "transformation" : "max(`last_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 88
+    },
+    "transformation" : "sum(`amount`)"
+  } ]
+}

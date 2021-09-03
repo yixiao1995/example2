@@ -1,0 +1,116 @@
+{
+  "name" : "PrepareComponent",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_open_date",
+      "exprId" : 70
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_length_days",
+      "exprId" : 90
+    },
+    "transformation" : "datediff(current_date(), CAST(`account_open_date` AS DATE))"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "order_id",
+      "exprId" : 71
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 72
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 73
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 74
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 74
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 75
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 75
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "phone",
+      "exprId" : 76
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone",
+      "exprId" : 76
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "email",
+      "exprId" : 77
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email",
+      "exprId" : 77
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "country_code",
+      "exprId" : 78
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "country_code",
+      "exprId" : 78
+    }
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "account_flags",
+      "exprId" : 79
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_flags",
+      "exprId" : 79
+    }
+  } ]
+}

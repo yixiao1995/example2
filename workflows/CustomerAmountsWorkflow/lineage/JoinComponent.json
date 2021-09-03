@@ -1,0 +1,115 @@
+{
+  "name" : "JoinComponent",
+  "component" : "Join",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "account_open_date",
+      "exprId" : 18
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_open_date",
+      "exprId" : 70
+    }
+  }, {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "order_id",
+      "exprId" : 0
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "order_id",
+      "exprId" : 71
+    }
+  }, {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "customer_id",
+      "exprId" : 1
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 72
+    }
+  }, {
+    "sources" : [ {
+      "port" : "left",
+      "name" : "amount",
+      "exprId" : 5
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 73
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "first_name",
+      "exprId" : 13
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "first_name",
+      "exprId" : 74
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "last_name",
+      "exprId" : 14
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "last_name",
+      "exprId" : 75
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "phone",
+      "exprId" : 15
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "phone",
+      "exprId" : 76
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "email",
+      "exprId" : 16
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "email",
+      "exprId" : 77
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "country_code",
+      "exprId" : 17
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "country_code",
+      "exprId" : 78
+    }
+  }, {
+    "sources" : [ {
+      "port" : "right",
+      "name" : "account_flags",
+      "exprId" : 19
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "account_flags",
+      "exprId" : 79
+    }
+  } ]
+}

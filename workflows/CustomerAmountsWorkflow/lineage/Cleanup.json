@@ -1,0 +1,44 @@
+{
+  "name" : "Cleanup",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "first_name",
+      "exprId" : 84
+    }, {
+      "port" : "in",
+      "name" : "last_name",
+      "exprId" : 86
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "name",
+      "exprId" : 96
+    },
+    "transformation" : "concat(`first_name`, ' ', `last_name`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "amount",
+      "exprId" : 88
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "amount",
+      "exprId" : 97
+    },
+    "transformation" : "CEIL(`amount`)"
+  }, {
+    "sources" : [ {
+      "port" : "in",
+      "name" : "customer_id",
+      "exprId" : 78
+    } ],
+    "destination" : {
+      "port" : "out",
+      "name" : "customer_id",
+      "exprId" : 78
+    }
+  } ]
+}
